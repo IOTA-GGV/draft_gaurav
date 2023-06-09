@@ -1,0 +1,541 @@
+:root {
+  --blue: #3b26e0ea;
+  --green: #65ff0b;
+  --skyblue: #58e3e7ea;
+  --pink: #fd009cea;
+  --grey: #858083ea;
+  --white: #fffdfdce;
+  --gradient: linear-gradient(90deg, var(--pink), var(--green));
+  --gradient2: linear-gradient(120deg, var(--skyblue), var(--grey));
+}
+
+
+
+
+
+
+
+
+
+
+
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all .2s ease-out;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #333;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 5rem;
+}
+
+body {
+  background: #333;
+  padding: 3rem 7%;
+}
+
+.heading {
+  color: white;
+ 
+  -webkit-background-clip: text;
+  background-clip: text;
+  padding: 0 1rem;
+  padding-top: 2.5rem;
+  text-align: center;
+  font-size: 4rem;
+
+}
+
+header {
+  display: flex;
+
+  align-items: center;
+  position: sticky;
+  justify-content: space-between;
+  width: 100%;
+
+
+  z-index: 1000;
+}
+
+.logo {
+  width: 30%;
+  display: flex;
+
+
+
+}
+
+.logo img {
+  width: 30%;
+  border: 3px solid white;
+  border-radius: 50px;
+}
+
+.topnav {
+
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Add an active class to highlight the current page */
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #0627ff;
+  color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+section {
+  padding: 2rem 7%;
+}
+
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.image {
+  filter: brightness(60%);
+}
+
+.btn {
+
+  position: absolute;
+  top: 80%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #039ef2;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn2 {
+
+  position: absolute;
+  top: 80%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #039ef2;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+.btn:hover {
+  background: var(--gradient);
+}
+
+.btn2:hover {
+  background: var(--gradient);
+}
+
+.about h1 {
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: black;
+  border: dotted gray;
+  border-left: 2px;
+  border-width: 2px;
+}
+
+
+.containerTab {
+  padding: 20px;
+  color: blue;
+  font-size: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  float: right;
+  color: gray;
+  font-size: 35px;
+  cursor: pointer;
+}
+.technology h1 {
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+.section{ 
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 80%;
+  margin: auto;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 10px;
+}
+
+.section-left{
+  flex-direction: row-reverse;
+}
+
+.paras {
+  padding: 0px 6px;
+  
+}
+.sectionTag{
+  padding: 16px 0;
+}
+
+.sectionSubTag{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.thumbnailright img{
+  width: 450px;
+  margin-top: 19px;
+ padding-left: 100px;
+}
+.thumbnailleft img{
+  width: 450px;
+ 
+  padding-right: 100px;
+  margin-top: 19px;
+ 
+}
+
+.secright{ 
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 100%;
+  margin: auto;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 10px;
+  padding-top: 50px;
+  margin-top: 30px;
+ 
+  
+}
+
+.secleft{ 
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 100%;
+  margin: auto;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 10px;
+  padding-top: 50px;
+  margin-top: 30px;
+  
+ 
+}
+
+
+
+
+
+
+.headingtag{
+  font-size: 28px;
+  color: white;
+  padding-top: 40px;
+
+}
+
+.paragraph{
+  font-size: 20px;
+  margin-top: 20px;
+color: whitesmoke;
+margin-bottom: 30px;
+}
+.btnsm {
+
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #039ef2;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btnsm:hover {
+  background: var(--gradient);
+
+
+}
+
+.event h1 {
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+
+.team h1 {
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+.team .box{
+  flex:1 1 23rem;
+  border:.1rem solid rgba(205, 203, 203, 0.1);
+  border-radius:.5rem;
+  padding:1.5rem;
+  text-align: center;
+}
+
+
+
+.teammember{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.team .box img{
+  height: 10rem;
+  width:10rem;
+  margin:.5rem 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.btnsmm{
+  display: inline-block;
+  margin-top: 1rem;
+  padding:.8rem 3rem;
+  border-radius: .5rem;
+  background:rgba(39, 51, 218, 0.911);
+  color:#fff;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+
+
+.btnsmm:hover{
+  background:var(--gradient);
+}
+.box:hover{
+  background:var(--gradient2);
+  
+}
+.team h3{
+  color: rgb(255, 248, 255);
+  font-size: 14px;
+}
+
+.aboutleads img{
+  height: 20rem;
+  width:20rem;
+  display: flex;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: auto;
+  margin-top: 50px;
+  padding-bottom: 10px;
+ 
+}
+.aboutleads h2{
+  text-align: center;
+font-size: 25px;
+color: white;
+padding: 10px;
+
+}
+.aboutleads h3{
+ 
+font-size: 25px;
+color: rgb(0, 234, 255);
+padding: 10px;
+
+}
+
+
+
+.footer .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+ 
+  
+}
+.box2{
+  flex:1 1 23rem;
+ 
+  padding:1.5rem;
+ 
+}
+
+.footer .box-container .box2{
+  flex:1 1 20rem;
+  margin-left: 3px;
+}
+
+.footer .box-container .box2 h3{
+  font-size: 2.5rem;
+  color: var(--white);
+  padding:.7rem 0;
+  margin-left: 2px;
+  font-size: 22px;
+  font-family: monospace;
+}
+
+.footer .box-container .box2 p{
+  font-size: 1.5rem;
+  color: white;
+  padding:.7rem 0;
+  
+  
+}
+
+.footer .box-container .box2 a{
+  display: block;
+  font-size: 1.5rem;
+  color:white;
+  padding:.7rem 2px;
+  
+  font-size: 19px;
+}
+
+.footer .box-container .box2 a:hover{
+  color: blueviolet;
+}
+
+.footer .box-container .box2 p i{
+  padding-right: .5rem;
+  color:var(--pink);
+}
+
+.footer .credit{
+  font-size: 2rem;
+  color: var(--white);
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
+}
+.footer .creditl{
+  font-size: 1.75rem;
+  color: black;
+ 
+}
+
+
+
+
