@@ -3,33 +3,45 @@ window.addEventListener("load", () => {
 });
 
 
-let loginpopup = document.querySelectorAll("#login");
-let registerpopup = document.querySelectorAll("#signup");
+document.querySelectorAll("#loginbutton, #logintext").forEach(item => {
+  item.addEventListener("click", () => {
+    document.querySelector("#login").style.cssText = "display:block;";
+    document.querySelector("#signup").style.cssText = "display:none;";
+  });
+});
 
-let nextbutton_1 = document.querySelectorAll("#next-button-1");
-let nextbutton_2 = document.querySelectorAll("#next-button-2");
+document.querySelectorAll("#signupbutton, #registertext").forEach(item => {
+  item.addEventListener("click", () => {
+    document.querySelector("#signup").style.cssText = "display:block;";
+    document.querySelector("#login").style.cssText = "display:none;";
+  });
+});
 
-let backbutton_1 = document.querySelectorAll("#back-button-1");
-let backbutton_2 = document.querySelectorAll("#back-button-2");
+
+document.querySelectorAll(".close-popup").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".popup").forEach(popup => {
+      popup.style.cssText = "display:none;";
+    });
+  });
+});
 
 
-function openLoginPopup() {
-  loginpopup.classList.add("open-popup");
-}
-function openSignupPopup() {
-  registerpopup.classList.add("open-popup");
-}
-function closePopup() {
-  loginpopup.classList.remove("open-popup");
-  registerpopup.classList.remove("open-popup");
-}
-function nextButton() {
+document.querySelector("#next-button-1").addEventListener("click", () => {
+  document.querySelector("#form-1").style.cssText = "visibility:.1;";
+});
 
-}
-function nextButton() {
+document.querySelector("#next-button-2").addEventListener("click", () => {
 
-}
+});
 
+document.querySelector("#back-button-1").addEventListener("click", () => {
+
+});
+
+document.querySelector("#back-button-2").addEventListener("click", () => {
+
+});
 
 // Add an event listener to each skills-box element
 var skillsBoxes = document.getElementsByClassName("skills-box");
