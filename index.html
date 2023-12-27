@@ -5,329 +5,275 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/NSEA.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-  <title>IOTA </title>
+  <script src="script.js" defer></script>
+  <script src="https://kit.fontawesome.com/266833c2f6.js" crossorigin="anonymous" defer></script>
+  <title>NSEA</title>
 </head>
+<div"preloader">
+  </div>
 
-<body>
+  <body>
+    <header>
+      <nav>
+        <a href="#home">
+          <h1>NSEA</h1>
+        </a>
+        <ul>
+          <li>
+            <a href="#about">About Us</a>
+          </li>
+          <li>
+            <a href="#technology">Technology</a>
+          </li>
+          <li>
+            <a href="#team">Team</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
 
-
-  <header>
-
-    <div class="logo"><img src="img/logo.jpg" alt="logo"></div>
-
-    <div class="topnav " id="myTopnav">
-      <a href="index.html">Home</a>
-      <a href="#about">About Us</a>
-      <div class="dropdown">
-        <button class="dropbtn">Technologies
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="#aiml">AI & ML</a>
-          <a href="#iot">Internet of Things</a>
-          <a href="#webdev">Web Development</a>
-          <a href="#appdev">Android Development</a>
-          <a href="#cybersecurity">Cyber Security</a>
-          <a href="#cpdsa">CP and DSA</a>
+    <section id="home">
+      <div class="slideshow"></div>
+      <div class="text-on-slideshow">
+        <p style="font-size:70px; margin-bottom: 30px;">WELCOME TO <b>NSEA</b>
+        </p>
+        <p style=" font-size:30px; margin-bottom:10px">National Society for Engineering Advancement</p>
+        <p style="font-size:20px;">A Dedicated Society For Tech Enthusiasts</p>
+        <div class="button-on-slideshow">
+          <button id="loginbutton">Login</button><button id="signupbutton">Register</button>
         </div>
       </div>
-      <a href="#events">Events</a>
+      <ul id="icons-on-slideshow">
+        <li><a href=# target="blank"><i class="fa-brands fa-linkedin fa-2x" style="color:white;"></i></a></li>
 
-      <div class="dropdown">
-        <button class="dropbtn">Projects
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="#completed">Completed</a>
-          <a href="#ongoing">OnGoing</a>
-          <a href="#upcoming">Upcoming</a>
+        <li><a href="https://github.com/IOTA-GGV" target="blank"><i class="fa-brands fa-github fa-2x"
+              style="color:white;"></i></a></li>
+
+        <li><a href=# target="blank"><i class="fa-solid fa-envelope fa-2x" style="color:white;"></i></a></li>
+      </ul>
+
+      <div class="popup" id="login">
+        <p class="close-popup">✖️</p>
+        <p class="login-signup-heading">Login</p>
+        <form>
+          <p>Welcome Back!</p>
+          <input type="email" name="email" class="login-input" placeholder="Email or Phone" notrequired>
+          <input type="password" name="password" class="login-input" placeholder="Password" notrequired>
+          <p id="login-forgot-password">Forgot Password?</p>
+          <input type="submit" class="popup-button" value="Login">
+          <p id="login-or">____________________ or ____________________</p>
+          <button class="login-google-linkedin"><i class="fa-brands fa-google" style="color:white;"></i>
+            &nbsp;&nbsp;&nbsp;Continue with Google</button>
+          <button class="login-google-linkedin"><i class="fa-brands fa-linkedin" style="color:white;"></i>
+            &nbsp;&nbsp;&nbsp;Continue with LinkedIn</button>
+          <p class="login-not-member">Not a member yet? <u id="registertext">Register</u></p>
+          <p id="login-policy">By signing in to this website, you agree to our <u>Privacy Policy</u> &
+            <u>Cookie Policy</u>.
+          </p>
+        </form>
+      </div>
+
+      <div class="popup" id="signup">
+        <p class="close-popup">✖️</p>
+        <p class="login-signup-heading">Register</p>
+        <div id="signup-form">
+
+          <form id="form-1">
+            <p>Welcome Fellas!</p>
+            <input type="email number" name="email" class="login-input" placeholder="Email" notrequired>
+            <input type="password" name="password" class="login-input" placeholder="Password" notrequired>
+            <input type="password" name="confirmPassword" class="login-input" placeholder="Confirm Password"
+              notrequired>
+            <button class="popup-button" id="next-button-1">Next</button>
+            <p id="login-or">____________________ or ____________________</p>
+            <button class="login-google-linkedin"><i class="fa-brands fa-google" style="color:white;"></i>
+              &nbsp;&nbsp;&nbsp;Continue with Google</button>
+            <button class="login-google-linkedin"><i class="fa-brands fa-linkedin" style="color:white;"></i>
+              &nbsp;&nbsp;&nbsp;Continue with LinkedIn</button>
+            <p class="login-not-member">Already a member? <u id="logintext">Login</u></p>
+            </p>
+          </form>
+
+          <form id="form-2">
+            <input type="email number" name="email" class="login-input" placeholder="Email" notrequired>
+            <input type="password" name="password" class="login-input" placeholder="Password" notrequired>
+            <input type="password" name="confirmPassword" class="login-input" placeholder="Confirm Password"
+              notrequired>
+            <button class="popup-button" id="back-button-1">Back</button>
+            <button class="popup-button" id="next-button-2">Next</button>
+          </form>
+
+          <form id="form-3">
+            <input type="email number" name="email" class="login-input" placeholder="Email" notrequired>
+            <input type="password" name="password" class="login-input" placeholder="Password" notrequired>
+            <input type="password" name="confirmPassword" class="login-input" placeholder="Confirm Password"
+              notrequired>
+            <button class="popup-button" id="back-button-2">Back</button>
+            <p id="login-policy">By signing in to this website, you agree to our <u>Privacy Policy</u> &
+              <u>Cookie Policy</u>.
+            </p>
+            <input type="submit" class="popup-button" value="Submit">
+          </form>
         </div>
       </div>
-      <a href="#team">Team</a>
-      <a href="#contact">Contact</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-    </div>
+
+    </section>
 
 
-  </header>
+    <section id="about">
+      <h2 class="head">ABOUT US</h2>
+      <div id="about-1"></div>
+      <div id="about-2"></div>
+      <article id="about-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, expedita sit blanditiis illo
+        fugiat animi est recusandae magnam aspernatur, suscipit minima corporis cumque! Hic earum nemo perferendis eum
+        totam unde aliquam corrupti. Illum ut laboriosam iure, maxime, hic quasi minima rerum cum incidunt accusamus
+        aspernatur sit voluptatibus quis reiciendis numquam velit. Quasi ratione molestias magni ullam rem autem quaerat
+        enim commodi amet eveniet recusandae illo, unde neque vero esse ab hic voluptatem, sed ipsa exercitationem
+        delectus! Temporibus ipsam odio officiis.</article>
+      <div id="about-4"></div>
+      <div id="about-5"></div>
+    </section>
 
 
-  <section class="home" id="home">
+    <section id="technology">
+      <h2 class="heading">TECHNOLOGY</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, temporibus suscipit soluta ad obcaecati vitae?
+        Libero beatae qui tempora ullam alias deserunt vero corporis. Corporis eligendi quo, sunt provident qui quos
+        officia eos in ratione eaque quod alias adipisci voluptatum deleniti explicabo consectetur ducimus nam? Dolor
+        aut harum hic quae velit natus quas quis. Cumque adhoio.
+      </p>
+      <ul id="techstacks">
+        <li style="background-image: url(img/aiml.png);"></li>
+        <li style="background-image: url(img/iot.png);"></li>
+        <li style="background-image: url(img/webdev.png);"></li>
+        <li style="background-image: url(img/appdev.png);"></li>
+        <li style="background-image: url(img/cyber.png);"></li>
+        <li style="background-image: url(img/cpdsa.png);"></li>
+      </ul>
+      <div class="button-on-slideshow" id="button-on-technology">
+        <button>View Projects</button>
+      </div>
+    </section>
 
 
-
-    <div class="paras">
-
-      <div class="slideshow-container">
-
-
-
-        <div class="mySlides fade">
-
-
-
-          <div class="image">
-            <img src="https://source.unsplash.com/1600x900/?technology" alt="education" width="900px" height="500px">
+    <section>
+      <div class="wrapper">
+        <h2 class="head">TEAM</h2>
+        <div class="teammember1">1</div>
+        <div class="teammember2">2</div>
+        <div class="teammember3">
+          <div class="carrousel">
+            <article class="card">html</article>
+            <article class="card">css</article>
+            <article class="card">javascript</article>
+            <article class="card">java</article>
+            <article class="card">python</article>
+            <article class="card">c</article>
+            <article class="card">nodejs</article>
+            <article class="card">c++</article>
+            <article class="card">linux</article>
+            <article class="card">ubuntu</article>
+            <article class="card">css</article>
+            <article class="card">javascript</article>
+            <article class="card">html</article>
+            <article class="card">css</article>
+            <article class="card">javascript</article>
           </div>
         </div>
-        <div class="mySlides fade">
-
-          <div class="image">
-            <img src="https://source.unsplash.com/1600x900/?artificail intelligence" alt="education" width="900px"
-              height="500px">
-          </div>
-        </div>
-        <div class="mySlides fade">
-
-          <div class="image">
-            <img src="https://source.unsplash.com/1600x900/?machine learning" alt="education" width="900px"
-              height="500px">
-          </div>
-        </div>
-        <div class="mySlides fade">
-
-          <div class="image">
-            <img src="https://source.unsplash.com/1600x900/?robots" alt="education" width="900px" height="500px">
-          </div>
-
-        </div>
-
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-
-        </div>
-        <a href="register.html" class="btn">Register</a>
-        <a href="login.html" class="btn2">Login</a>
-
-      </div>
-    </div>
-
-
-  </section>
-  <section class="about" id="about">
-    <h1>ABOUT US </h1>
-
-    <section class="secright">
-      <div class="paras">
-        <p class="headingtag">About Us</p>
-        <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
-          assumenda optio sed, asperiores quam veniam porro ea, quisquam hic odio, a consequuntur alias similique quo
-          iusto cupiditate rerum? Corporis, voluptatem? </p>
-
-      </div>
-      <div class="thumbnailright">
-        <img src="img/about iota.jpg" alt="laptop image" class="imgFluid">
-
-      </div>
-    </section>
-    <section class="secleft">
-      <div class="paras">
-        <p class="headingtag">Aim</p>
-        <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
-          assumenda optio sed, asperiores quam veniam porro ea, quisquam hic odio, a consequuntur alias similique quo
-          iusto cupiditate rerum? Corporis, voluptatem? </p>
-
-      </div>
-      <div class="thumbnailleft">
-        <img src="img/aim.png" alt="laptop image" class="imgFluid">
-      </div>
-
-    </section>
-    <section class="secright">
-      <div class="paras">
-        <p class="headingtag">Vision</p>
-        <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
-          assumenda optio sed, asperiores quam veniam porro ea, quisquam hic odio, a consequuntur alias similique quo
-          iusto cupiditate rerum? Corporis, voluptatem? </p>
-
-      </div>
-      <div class="thumbnailright">
-        <img src="img/vision.png" alt="laptop image" class="imgFluid">
       </div>
     </section>
 
-  </section>
 
-  <section class="technology" id="technology">
-    <h1>Technology</h1>
+    <section id="team">
+      <h2 class="heading">TEAM</h2>
 
-    <section class="secright" id="aiml">
-      <div class="paras">
-        <p class="headingtag">Artificial Intelligence and Machine Learning</p>
-        <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
-          assumenda optio sed, asperiores quam veniam porro ea, quisquam hic odio, a consequuntur alias similique quo
-          iusto cupiditate rerum? Corporis, voluptatem? </p>
-        <a href="#" class="btnsm">Learn Now</a>
-      </div>
-      <div class="thumbnailright">
-        <img src="img/aiml.png" alt="laptop image" class="imgFluid">
-
-      </div>
-    </section>
-    <section class="secleft" id="iot">
-      <div class="paras">
-        <p class="headingtag">Internet of Things</p>
-        <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
-          assumenda optio sed, asperiores quam veniam porro ea, quisquam hic odio, a consequuntur alias similique quo
-          iusto cupiditate rerum? Corporis, voluptatem? </p>
-        <a href="#" class="btnsm">Learn Now</a>
-      </div>
-      <div class="thumbnailleft">
-        <img src="img/iot.png" alt="laptop image" class="imgFluid">
-      </div>
-
-    </section>
-    <section class="secright" id="webdev">
-      <div class="paras">
-        <p class="headingtag">Web Development</p>
-        <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
-          assumenda optio sed, asperiores quam veniam porro ea, quisquam hic odio, a consequuntur alias similique quo
-          iusto cupiditate rerum? Corporis, voluptatem? </p>
-        <a href="#" class="btnsm">Learn Now</a>
-      </div>
-      <div class="thumbnailright">
-        <img src="img/webdev.png" alt="laptop image" class="imgFluid">
-      </div>
-    </section>
-    <section class="secleft" id="appdev">
-      <div class="paras">
-        <p class="headingtag">Android Development</p>
-        <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
-          assumenda optio sed, asperiores quam veniam porro ea, quisquam hic odio, a consequuntur alias similique quo
-          iusto cupiditate rerum? Corporis, voluptatem? </p>
-        <a href="#" class="btnsm">Learn Now</a>
-      </div>
-      <div class="thumbnailleft">
-        <img src="img/appdev.png" alt="laptop image" class="imgFluid">
-      </div>
-    </section>
-    <section class="secright">
-      <div class="paras">
-        <p class="headingtag" id="cybersecurity">Cyber Security</p>
-        <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
-          assumenda optio sed, asperiores quam veniam porro ea, quisquam hic odio, a consequuntur alias similique quo
-          iusto cupiditate rerum? Corporis, voluptatem? </p>
-        <a href="#" class="btnsm">Learn Now</a>
-      </div>
-      <div class="thumbnailright">
-        <img src="img/cyber.png" alt="laptop image" class="imgFluid">
-      </div>
-    </section>
-    <section class="secleft" id="cpdsa">
-      <div class="paras">
-        <p class="headingtag">Competitive Programming and DSA</p>
-        <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
-          assumenda optio sed, asperiores quam veniam porro ea, quisquam hic odio, a consequuntur alias similique quo
-          iusto cupiditate rerum? Corporis, voluptatem? </p>
-        <a href="#" class="btnsm">Learn Now</a>
-      </div>
-      <div class="thumbnailleft">
-        <img src="img/cpdsa.png" alt="laptop image" class="imgFluid">
-      </div>
+      <ul id="teammember">
+        <a href="faculty.html">
+          <li>
+            <img src="img/man.jpg" alt="">
+            <h3>Faculty Coordinator</h3>
+          </li>
+        </a>
+        <a href="studentlead.html">
+          <li>
+            <img src="img/profile pic - Sanidhya Kumar Ghosal.jpg" alt="">
+            <h3>Student Lead</h3>
+          </li>
+        </a>
+        <a href="team.html">
+          <li>
+            <img src="img/man.jpg" alt="">
+            <h3>Team </h3>
+          </li>
+        </a>
+        <ul>
+          <svg viewBox="0 0 75 75" width="200px">
+            <path d="m5,22 18,-18 28,0 18,18 0,28 -18,18, -28,0 -18,-18z" stroke="red" stroke-width="2" fill="white" />
+          </svg>
+          <div id="test"></div>
     </section>
 
-  </section>
-  
 
-
-
-
-
-
-
-
-  <section class="team" id="team">
-    <h1>Team</h1>
-    <div class="teammember">
-      <div class="box">
-        <img src="img/man.jpg" alt="">
-        <h3>Faculty Coordinator</h3>
-        <a href="faculty.html" class="btnsmm">View</a>
+    <section id="projects">
+      <h2 class="head">PROJECTS</h2>
+      <div class="board"></div>
+      <h3 class="h3-board">2023-24</h3>
+      <a class="h3-board" id="h3-left" href="#">
+        <h3>◀</h3>
+      </a>
+      <a class="h3-board" id="h3-right" href="#">
+        <h3>▶</h3>
+      </a>
+      <div id="planned">
+        <h3>Planned</h3>
+        <li class="ongoing">NSEA Club Website-Frontend</li>
+        <li class="ongoing">NSEA Club Website-backend</li>
+        <li>Quadcopter</li>
       </div>
-      <div class="box">
-        <img src="img/profile pic - Sanidhya Kumar Ghosal.jpg" alt="">
-        <h3>Student Lead</h3>
-        <a href="studentlead.html" class="btnsmm">View</a>
+      <div id="completed">
+        <h3>Completed</h3>
       </div>
-      <div class="box">
-        <img src="img/man.jpg" alt="">
-        <h3>Team </h3>
-        <a href="team.html" class="btnsmm">View</a>
-      </div>
-    </div>
-    
-  </section>
+      <div id="shadow-line"></div>
 
-
-
-  <section class="footer">
-
-    <div class="box-container">
-
-
-
-      <div class="box2">
+      <footer>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1062.6441445650999!2d82.14540689786654!3d22.124291315095476!2m3!1f0!2f39.12863151269603!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x3a280bef6fcaec8f%3A0xf584a2dfe0cf66be!2sInstitute%20of%20Technology%2CGuru%20Ghasidas%20University!5e1!3m2!1sen!2sin!4v1687528773387!5m2!1sen!2sin"
+          width="100%" height="100%" style="opacity: 0.6;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </footer>
+      <div class="footer-info">
         <h3>Quick links</h3>
-        <a href="index.html">Home</a>
+        <a href="#home">Home</a>
         <a href="#about">About Us</a>
-        <a href="#technology">Technologies</a>
-        <a href="#event">Event</a>
-        <a href="#project">Project</a>
+        <a href="#technology">Technology</a>
         <a href="#team">Team</a>
+        <a href="#project">Projects</a>
       </div>
+      <div class="footer-sub">
+        <h3 style="width: 170px;">Stay Connected!</h3>
+        <input type="email" name="email" id="email" placeholder=" Enter Your Email">
+        <button>Subscribe</button>
+        <ul id="icons-on-footer">
+          <li><a href=# target="blank"><i class="fa-brands fa-linkedin fa-2x" style="color:rgb(0, 0, 0);"></i></a>
+          </li>
 
+          <li><a href="https://github.com/IOTA-GGV" target="blank"><i class="fa-brands fa-github fa-2x"
+                style="color:rgb(0, 0, 0);"></i></a></li>
 
-      <div class="box2">
-        <h3>Follow Us</h3>
-        <a href="#" class=" fab fa-facebook" target="_blank">Facebook</a>
-        <a href="#" class="fab fa-telegram" target="_blank">Telegram</a>
-        <a href="#" class="fab fa-instagram" target="_blank">Instagram</a>
-        <a href="#" class="fas fa-linkedin" target="_blank">Linkedin</a>
+          <li><a href=# target="blank"><i class="fa-solid fa-envelope fa-2x" style="color:rgb(0, 0, 0);"></i></a>
+          </li>
+        </ul>
+        <p>Copyright © 2023 Surojit Mondal</p>
       </div>
-      <div class="box2">
-        <h3>Contact us</h3>
-        <p> <i class="fas fa-envelope"></i> contact.iotateam@gmail.com</p>
-        <a href="#" class="fab fa-form">Reach Us </a>
+    </section>
 
-      </div>
-
-    </div>
-
-
-
-    <div class="creditl">
-
-      <div class="credit"> Copyright &#169 2023 Gaurav Kumar
-      </div>
-    </div>
-
-
-
-
-  </section>
-
-
-  <script>
-    function activateEvent(event) {
-      var events = document.getElementsByClassName('event');
-
-      for (var i = 0; i < events.length; i++) {
-        events[i].classList.remove('active');
-      }
-
-      event.classList.add('active');
-    }
-  </script>
-  <script src="script.js"></script>
-  <script src="main.js"></script>
-</body>
+  </body>
 
 </html>

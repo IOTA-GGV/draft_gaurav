@@ -1,57 +1,69 @@
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
-  
+window.addEventListener("load", () => {
+  document.querySelector("#preloader").style.cssText = "display:none;";
+});
 
 
+document.querySelectorAll("#loginbutton, #logintext").forEach(item => {
+  item.addEventListener("click", () => {
+    document.querySelector("#login").style.cssText = "display:block;";
+    document.querySelector("#signup").style.cssText = "display:none;";
+  });
+});
+
+document.querySelectorAll("#signupbutton, #registertext").forEach(item => {
+  item.addEventListener("click", () => {
+    document.querySelector("#signup").style.cssText = "display:block;";
+    document.querySelector("#login").style.cssText = "display:none;";
+  });
+});
 
 
-  function openTab(tabName) {
-    var i, x;
-    x = document.getElementsByClassName("containerTab");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    document.getElementById(tabName).style.display = "block";
-  }
+document.querySelectorAll(".close-popup").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".popup").forEach(popup => {
+      popup.style.cssText = "display:none;";
+    });
+  });
+});
 
 
+document.querySelector("#next-button-1").addEventListener("click", () => {
+  document.querySelector("#form-1").style.cssText = "visibility:.1;";
+});
 
+document.querySelector("#next-button-2").addEventListener("click", () => {
 
+});
 
-let slideIndex = 0;
-showSlides();
+document.querySelector("#back-button-1").addEventListener("click", () => {
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000); // Change image every 5 seconds
-}
+});
 
+document.querySelector("#back-button-2").addEventListener("click", () => {
 
-
+});
 
 // Add an event listener to each skills-box element
 var skillsBoxes = document.getElementsByClassName("skills-box");
 for (var i = 0; i < skillsBoxes.length; i++) {
-  skillsBoxes[i].addEventListener("click", function() {
+  skillsBoxes[i].addEventListener("click", function () {
     // Toggle the active class on the clicked skills-box
     this.classList.toggle("active");
   });
 }
+
+
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
